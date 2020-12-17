@@ -1,17 +1,24 @@
 // alert("Hello world");
 
-var cognomeUtente = prompt("inserisci il tuo cognome");
-console.log(cognomeUtente);
-var cognomeUtenteCap = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(1);
-console.log(cognomeUtenteCap);
+var confirm = document.getElementById("conferma");
+confirm.addEventListener("click", function() {
+
+var cognomeUtente = document.getElementById("userLastName").value;
+cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.substr(1).toLowerCase();
+document.getElementById("iLastName").innerHTML = cognomeUtente;
+
+
 var elencoCognomi = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
-console.log(elencoCognomi);
-elencoCognomi.push(cognomeUtenteCap);
-console.log(elencoCognomi);
+document.getElementById("oList").innerHTML = elencoCognomi.join(' - ');
+
+elencoCognomi.push(cognomeUtente);
 elencoCognomi.sort();
-console.log(elencoCognomi);
-var posizione = elencoCognomi.indexOf(cognomeUtenteCap);
-console.log(posizione + 1);
+document.getElementById("mList").innerHTML = elencoCognomi.join(' - ');
+
+var posizione = elencoCognomi.indexOf(cognomeUtente);
+document.getElementById("pos").innerHTML = (posizione + 1);
+
+});
 
 
 

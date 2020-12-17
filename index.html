@@ -5,22 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Array Cognomi</title>
 </head>
 
 <body>
 
+  <div class="container">
+    <div class="row ">
+      <h2>Elenco</h2>
+    </div>
 
-
-
-
-
-
-
-
-
-
+    <div class="row">
+      <label for="userLastName">Inserisci Cognome :</label>
+      <input id="userLastName" type="text" size="42" placeholder="Inserisci Cognome...">
+      <div class="">
+      <div id="conferma" class="btn">Invio</div>
+    </div>
+    </div>
+    <div class="row x ">
+      <h2>Risultati</h2>
+      <p>Lista originale : <span id="oList"></span></p>
+      <p>Cognome inserito : <span id="iLastName"></span></p>
+      <p>Lista aggiornata ordinata alfabeticamente : <span id="mList"></span></p>
+      <p>Posizione utente inserito : <span id="pos"></span></p>
+    </div>
+  </div>
 
   <script src="js/script.js" charset="utf-8"></script>
 </body>
